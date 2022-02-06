@@ -13,11 +13,11 @@ const Calcalator = () => {
   }, [price, percentage])
 
   return (
-    <>
+    <div className="container">
       <SupplierPrice price={price} setPrice={setPrice} />
       <ProfitPercentage percentage={percentage} setPercentage={setPercentage} />
       <Retail retail={retail} price={price} />
-    </>
+    </div>
   )
 }
 
@@ -46,7 +46,7 @@ const SupplierPrice = (props) => {
   return (
     <div>
       <label>Supplier Price</label>
-      <input type="text" onChange={typingPrice} value={price} />
+      <input type="number" onChange={typingPrice} value={price} />
     </div>
   )
 }
@@ -63,7 +63,7 @@ const ProfitPercentage = (props) => {
   return (
     <div>
     <label>Percent Profit</label>
-    <input type="text" onChange={typingPercentage} value={percentage} />
+    <input type="number" onChange={typingPercentage} value={percentage} />
     </div>
   )
 }
